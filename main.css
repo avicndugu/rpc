@@ -1,0 +1,17 @@
+body{
+	background-color: #fff;
+	margin:0;
+	margin-top: -10px;
+}
+img{
+	display:inline;
+	width:70%;
+}
+.row{
+	width:100%;
+	padding:5%;
+}
+.collumn{
+	float:left;
+	width:33%;
+}
