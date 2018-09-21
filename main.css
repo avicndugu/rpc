@@ -1,11 +1,13 @@
 body{
-	background-color: #fff;
+	background-color: #C2FCD9;
 	margin:0;
 	margin-top: -10px;
 }
 img{
 	display:inline;
 	width:70%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .row{
 	width:100%;
@@ -13,5 +15,17 @@ img{
 }
 .collumn{
 	float:left;
-	width:33%;
+	width:30%;
+	padding:10px;
+	background:#A0E4B0;
+}
+.bgColor{
+/*F8FBA2
+FA7F7F
+*/
+/*#48466D
+#3D84A8
+#46CDCF
+#ABEDD8
+*/
 }
