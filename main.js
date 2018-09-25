@@ -1,5 +1,6 @@
 // MAKES SURE THAT THE PAGE NOTIFIER DELETES THE TEXT NODE AFTER IT SHOWS
 // MAYBE A DELAY FUNCTIION THAT DELETES TEXT NODE AFTER ONE SECOND OF SHOWING UP ON DOM TREE
+// instead of just human won write eg. scissor cuts paper, Human won
 var computer, human;
 var rock="rock";
 var paper="paper";
@@ -27,16 +28,19 @@ function computerLogic(){
 if (computer==rock){
 	if (human==rock) {
 		drawShow();
+		choices();
 		console.log("draw");
 	}
 	else if(human==paper){
 		humanScore+=1;
 		humanWinShow();
+		choices();
 		console.log("Human Wins");	
 	}
 	else if(human==scissors){
 		computerScore+=1;
 		compWinShow();
+		choices();
 		console.log("Computer Wins");	
 	}
 	console.log(humanScore);
@@ -46,15 +50,18 @@ if (computer==paper) {
 	if (human==rock) {
 		computerScore+=1;
 		compWinShow();
+		choices();
 		console.log("Computer Wins");
 	}
 	else if(human==paper){
 		drawShow();
+		choices();
 		console.log("draw");	
 	}
 	else if(human==scissors){
 		humanScore+=1;
 		humanWinShow();
+		choices();
 		console.log("Human Wins");	
 	}
 	console.log(humanScore);
@@ -64,23 +71,39 @@ if (computer==scissors) {
 	if (human==rock) {
 		humanScore+=1;
 		humanWinShow();
+		choices();
 		console.log("Human Wins");
 	}
 	else if(human==paper){
 		computerScore+=1;
 		compWinShow();
+		choices();
 		console.log("Computer Wins");	
 	}
 	else if(human==scissors){
 		drawShow();
+		choices();
 		console.log("draw");	
 	}
 	console.log(humanScore);
 	console.log(computerScore);	
 }
-	function compWinShow(){
+function choices(){
+// inserts computer's choice as text to the DOM
+		var compShow=document.createElement('p');
+		var compNode= document.createTextNode("computer choice is: "+ computer);		
+		compShow.appendChild(compNode);
+		var compNoted=document.getElementById("pageNote");
+		compNoted.appendChild(compShow);
+// inserts human's choice as text to the DOM
+		var humanShow=document.createElement('p');
+		var humanNode= document.createTextNode("Your choice is: "+ human);		
+		humanShow.appendChild(humanNode);
+		var humanNoted=document.getElementById("pageNote");
+		humanNoted.appendChild(humanShow);
+}
+function compWinShow(){
 		var notify=document.createElement('p');
-		// var node= document.createTextNode(computerScore);
 		var node= document.createTextNode("Computer Scored");		
 		notify.appendChild(node);
 		var notified=document.getElementById("pageNote");
