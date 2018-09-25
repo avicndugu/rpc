@@ -96,7 +96,7 @@ function choices(){
 		var compNoted=document.getElementById("pageNote");
 		compNoted.appendChild(compChoiceShow);
 // Removes the computers choice from the view
-		setTimeout(hideCompChoice, 1000);
+		setTimeout(hideCompChoice,  1000);
 		function hideCompChoice(){
 			compChoiceShow.removeChild(compNode);
 		}
@@ -107,7 +107,7 @@ function choices(){
 		var humanNoted=document.getElementById("pageNote");
 		humanNoted.appendChild(humanChoiceShow);
 // Removes the human's choice from the view
-		setTimeout(hideHumanChoice, 1000);
+		setTimeout(hideHumanChoice,  1000);
 		function hideHumanChoice(){
 			humanChoiceShow.removeChild(humanNode);
 		}
@@ -119,7 +119,7 @@ function compWinShow(){
 		var notified=document.getElementById("pageNote");
 		notified.appendChild(notify);
 // Removes the computers choice from the view
-		setTimeout(removeCompScore, 1000);
+		setTimeout(removeCompScore,  1000);
 		function removeCompScore(){
 			notify.removeChild(node);
 		}
@@ -131,7 +131,7 @@ function humanWinShow(){
 		var notified=document.getElementById("pageNote");
 		notified.appendChild(notify);
 		// Removes the computers choice from the view
-		setTimeout(removeCompScore, 1000);
+		setTimeout(removeCompScore,  1000);
 		function removeCompScore(){
 			notify.removeChild(node);
 		}
@@ -143,7 +143,7 @@ function drawShow(){
 	var notified=document.getElementById("pageNote");
 	notified.appendChild(notify);
 	// Removes the computers choice from the view
-	setTimeout(removeCompScore, 1000);
+	setTimeout(removeCompScore,  1000);
 	function removeCompScore(){
 		notify.removeChild(node);
 	}
