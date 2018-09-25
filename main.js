@@ -90,17 +90,27 @@ if (computer==scissors) {
 }
 function choices(){
 // inserts computer's choice as text to the DOM
-		var compShow=document.createElement('p');
+		var compChoiceShow=document.createElement('p');
 		var compNode= document.createTextNode("computer choice is: "+ computer);		
-		compShow.appendChild(compNode);
+		compChoiceShow.appendChild(compNode);
 		var compNoted=document.getElementById("pageNote");
-		compNoted.appendChild(compShow);
+		compNoted.appendChild(compChoiceShow);
+// Removes the computers choice from the view
+		setTimeout(hideCompChoice, 1000);
+		function hideCompChoice(){
+			compChoiceShow.removeChild(compNode);
+		}
 // inserts human's choice as text to the DOM
-		var humanShow=document.createElement('p');
+		var humanChoiceShow=document.createElement('p');
 		var humanNode= document.createTextNode("Your choice is: "+ human);		
-		humanShow.appendChild(humanNode);
+		humanChoiceShow.appendChild(humanNode);
 		var humanNoted=document.getElementById("pageNote");
-		humanNoted.appendChild(humanShow);
+		humanNoted.appendChild(humanChoiceShow);
+// Removes the human's choice from the view
+		setTimeout(hideHumanChoice, 1000);
+		function hideHumanChoice(){
+			humanChoiceShow.removeChild(humanNode);
+		}
 }
 function compWinShow(){
 		var notify=document.createElement('p');
@@ -108,13 +118,23 @@ function compWinShow(){
 		notify.appendChild(node);
 		var notified=document.getElementById("pageNote");
 		notified.appendChild(notify);
+// Removes the computers choice from the view
+		setTimeout(removeCompScore, 1000);
+		function removeCompScore(){
+			notify.removeChild(node);
+		}
 	}
 function humanWinShow(){
-	var notify=document.createElement('p');
-	var node= document.createTextNode("Human Scored");
-	notify.appendChild(node);
-	var notified=document.getElementById("pageNote");
-	notified.appendChild(notify);
+		var notify=document.createElement('p');
+		var node= document.createTextNode("Human Scored");
+		notify.appendChild(node);
+		var notified=document.getElementById("pageNote");
+		notified.appendChild(notify);
+		// Removes the computers choice from the view
+		setTimeout(removeCompScore, 1000);
+		function removeCompScore(){
+			notify.removeChild(node);
+		}
 }
 function drawShow(){
 	var notify=document.createElement('p');
@@ -122,6 +142,11 @@ function drawShow(){
 	notify.appendChild(node);
 	var notified=document.getElementById("pageNote");
 	notified.appendChild(notify);
+	// Removes the computers choice from the view
+	setTimeout(removeCompScore, 1000);
+	function removeCompScore(){
+		notify.removeChild(node);
+	}
 }
 }
 
