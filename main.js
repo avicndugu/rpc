@@ -84,9 +84,10 @@ function computerLogic() {
 	function choices() {
 		// inserts computer's choice as text to the DOM
 		var compChoiceShow = document.createElement('p');
-		var compNode = document.createTextNode("computer choice is: " + computer);
+		var compNode = document.createTextNode(computer);
 		compChoiceShow.appendChild(compNode);
-		var compNoted = document.getElementById("pageNote");
+		var compNoted = document.getElementById("human");
+		document.getElementById('pageNote').style.color='#f00';
 		compNoted.appendChild(compChoiceShow);
 		// Removes the computers choice from the view
 		setTimeout(hideCompChoice, 1000);
@@ -96,9 +97,9 @@ function computerLogic() {
 		}
 		// inserts human's choice as text to the DOM
 		var humanChoiceShow = document.createElement('p');
-		var humanNode = document.createTextNode("Your choice is: " + human);
+		var humanNode = document.createTextNode(human);
 		humanChoiceShow.appendChild(humanNode);
-		var humanNoted = document.getElementById("pageNote");
+		var humanNoted = document.getElementById("comp");
 		humanNoted.appendChild(humanChoiceShow);
 		// Removes the human's choice from the view
 		setTimeout(hideHumanChoice, 1000);
@@ -112,7 +113,7 @@ function computerLogic() {
 		var notify = document.createElement('p');
 		var node = document.createTextNode("Computer Scored");
 		notify.appendChild(node);
-		var notified = document.getElementById("pageNote");
+		var notified = document.getElementById("outcome");
 		notified.appendChild(notify);
 		// Removes the computers choice from the view
 		setTimeout(removeCompScore, 1000);
@@ -126,7 +127,7 @@ function computerLogic() {
 		var notify = document.createElement('p');
 		var node = document.createTextNode("Human Scored");
 		notify.appendChild(node);
-		var notified = document.getElementById("pageNote");
+		var notified = document.getElementById("outcome");
 		notified.appendChild(notify);
 		// Removes the computers choice from the view
 		setTimeout(removeCompScore, 1000);
@@ -140,7 +141,7 @@ function computerLogic() {
 		var notify = document.createElement('p');
 		var node = document.createTextNode("It's a Draw");
 		notify.appendChild(node);
-		var notified = document.getElementById("pageNote");
+		var notified = document.getElementById("outcome");
 		notified.appendChild(notify);
 		// Removes the computers choice from the view
 		setTimeout(removeCompScore, 1000);

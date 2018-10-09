@@ -11,13 +11,16 @@ img{
 }
 .row{
 	width:100%;
-	padding:5%;
+	/*padding:5%;*/
 }
 .collumn{
 	float:left;
-	width:30%;
-	padding:10px;
+	width:33.3333%;
+	padding:10px 0;
 	background:#A0E4B0;
+}
+.row:after {
+ clear: all;
 }
 .bgColor{
 /*F8FBA2
@@ -28,4 +31,17 @@ FA7F7F
 #46CDCF
 #ABEDD8
 */
+}
+.pageNote {
+	text-align: center; 
+}
+.row2{
+	width:100%;
+}
+.collumn2 {
+	float:left;
+	width:33.3333%;
+	/*padding:20px 0;*/
+	background:#fff;
+	text-align: center;
 }
