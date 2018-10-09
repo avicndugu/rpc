@@ -87,10 +87,10 @@ function computerLogic() {
 		var compNode = document.createTextNode(computer);
 		compChoiceShow.appendChild(compNode);
 		var compNoted = document.getElementById("human");
-		document.getElementById('pageNote').style.color='#f00';
+		// document.getElementById('pageNote').style.color='#f00';
 		compNoted.appendChild(compChoiceShow);
 		// Removes the computers choice from the view
-		setTimeout(hideCompChoice, 1000);
+		setTimeout(hideCompChoice, 1500);
 
 		function hideCompChoice() {
 			compChoiceShow.removeChild(compNode);
@@ -102,7 +102,7 @@ function computerLogic() {
 		var humanNoted = document.getElementById("comp");
 		humanNoted.appendChild(humanChoiceShow);
 		// Removes the human's choice from the view
-		setTimeout(hideHumanChoice, 1000);
+		setTimeout(hideHumanChoice, 1500);
 
 		function hideHumanChoice() {
 			humanChoiceShow.removeChild(humanNode);
@@ -116,7 +116,7 @@ function computerLogic() {
 		var notified = document.getElementById("outcome");
 		notified.appendChild(notify);
 		// Removes the computers choice from the view
-		setTimeout(removeCompScore, 1000);
+		setTimeout(removeCompScore, 1500);
 
 		function removeCompScore() {
 			notify.removeChild(node);
@@ -130,7 +130,7 @@ function computerLogic() {
 		var notified = document.getElementById("outcome");
 		notified.appendChild(notify);
 		// Removes the computers choice from the view
-		setTimeout(removeCompScore, 1000);
+		setTimeout(removeCompScore, 1500);
 
 		function removeCompScore() {
 			notify.removeChild(node);
@@ -144,7 +144,7 @@ function computerLogic() {
 		var notified = document.getElementById("outcome");
 		notified.appendChild(notify);
 		// Removes the computers choice from the view
-		setTimeout(removeCompScore, 1000);
+		setTimeout(removeCompScore, 1500);
 
 		function removeCompScore() {
 			notify.removeChild(node);
@@ -167,3 +167,5 @@ document.querySelector('.scissors').addEventListener("click", function() {
 	computerLogic();
 	console.log(human);
 });
+
+document.querySelector('')

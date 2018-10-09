@@ -15,9 +15,8 @@ img{
 }
 .collumn{
 	float:left;
-	width:33.3333%;
+	width:33.33333%;
 	padding:10px 0;
-	background:#A0E4B0;
 }
 .row:after {
  clear: all;
@@ -38,10 +37,20 @@ FA7F7F
 .row2{
 	width:100%;
 }
+
 .collumn2 {
 	float:left;
 	width:33.3333%;
 	/*padding:20px 0;*/
 	background:#fff;
 	text-align: center;
+}
+.container {
+	width:80%;
+	background:#A0E4B0;
+	margin-right: auto;
+	margin-left: auto;
+}
+.row:after {
+ clear: all;
 }
