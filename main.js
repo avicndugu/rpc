@@ -87,7 +87,8 @@ function computerLogic() {
 		var compNode = document.createTextNode(computer);
 		compChoiceShow.appendChild(compNode);
 		var compNoted = document.getElementById("human");
-		// document.getElementById('pageNote').style.color='#f00';
+		// document.getElementById('human').style.padding='0px';
+		// document.getElementById('human').style.backgroundColor='red';
 		compNoted.appendChild(compChoiceShow);
 		// Removes the computers choice from the view
 		setTimeout(hideCompChoice, 1500);

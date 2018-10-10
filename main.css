@@ -42,12 +42,27 @@ FA7F7F
 	float:left;
 	width:33.3333%;
 	/*padding:20px 0;*/
-	background:#fff;
+	/*background:#ABEDD8;*/
 	text-align: center;
+}
+.collumn2 #human {
+	padding:10px 0px;
+	border-radius: 40px 0px;
+	background-color: #FA7F7F;
+}
+.collumn2 #comp {
+	padding:10px 0px;
+	border-radius: 40px 0px;
+	background-color: #FA7F7F;
+}
+.collumn2 #outcome {
+	padding:10px 0px;
+	border-radius: 40px 0px;
+	background-color: #FA7F7F;
 }
 .container {
 	width:80%;
-	background:#A0E4B0;
+	/*background:#A0E4B0;*/
 	margin-right: auto;
 	margin-left: auto;
 }
