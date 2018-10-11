@@ -28,7 +28,7 @@ function computerLogic() {
 
 //////////// END OF WHEN THE SCORES CHECKER SHOUTS COMPUTER WIN COMP SCORE +1
 
-	/////decision logic to identify who wins////////
+	///// Decision logic to identify who wins, draws or looses ////////
 	if (computer == rock) {
 		if (human == rock) {
 			drawShow();
@@ -86,92 +86,36 @@ function computerLogic() {
 		console.log(humanScore);
 		console.log(computerScore);
 	}
+///// END OF DECISION logic to identify who wins, draws or looses ////////
+
+//////// DISPLAYING CHOICES ON THE PAGE //////////////////////////
 
 	function choices() {
 		// inserts computer's choice as text to the DOM
 		var compChoiceShow = document.getElementById('comp');
 		compChoiceShow.innerHTML = computer;
-		// var compChoiceShow = document.createElement('p');
-		// var compNode = document.createTextNode(computer);
-		// compChoiceShow.appendChild(compNode);
-		// var parentHuman= document.getElementById("colHuman")
-		// var compNoted = document.getElementById("comp");
-		// parentHuman.replaceChild(compChoiceShow, compNoted);
-		// // compNoted.appendChild(compChoiceShow);
-		// // Removes the computers choice from the view
-		// setTimeout(hideCompChoice, 1500);
-
-		// function hideCompChoice() {
-		// 	compChoiceShow.removeChild(compNode);
-		// }
 		// inserts human's choice as text to the DOM
 		var humanChoiceShow = document.getElementById('human');
-		// console.log(humanChoiceShow);
 		humanChoiceShow.innerHTML= human;
-		// var humanChoiceShow = document.createElement('p');
-		// var humanNode = document.createTextNode(human);
-		// humanChoiceShow.appendChild(humanNode);
-		// var humanNoted = document.getElementById("comp");
-		// humanNoted.appendChild(humanChoiceShow);
-		// // Removes the human's choice from the view
-		// setTimeout(hideHumanChoice, 1500);
-
-		// function hideHumanChoice() {
-		// 	humanChoiceShow.removeChild(humanNode);
-		// }
 	}
 
 	function compWinShow() {
 		var notified = document.getElementById('outcome');
 		notified.innerHTML="Computer Scored";
-		// var notify = document.createElement('p');
-		// var node = document.createTextNode("Computer Scored");
-		// notify.appendChild(node);
-		// var notified = document.getElementById("outcome");
-		// notified.appendChild(notify);
-		// // Removes the computers choice from the view
-		// setTimeout(removeCompScore, 1500);
-
-		// function removeCompScore() {
-		// 	notify.removeChild(node);
-		// }
 	}
 
 	function humanWinShow() {
 		var notified = document.getElementById("outcome");
 		notified.innerHTML="Human Scored";
-		// console.log(notified);		
-		// var notify = document.createElement('p');
-		// var node = document.createTextNode("Human Scored");
-		// notify.appendChild(node);
-		// var notified = document.getElementById("outcome");
-		// notified.appendChild(notify);
-		// // Removes the computers choice from the view
-		// setTimeout(removeCompScore, 1500);
-
-		// function removeCompScore() {
-		// 	notify.removeChild(node);
-		// }
 	}
 
 	function drawShow() {
 		var notified = document.getElementById("outcome");
 		notified.innerHTML="Its a draw";
 		console.log(notified);
-	// 	var notify = document.createElement('p');
-	// 	var node = document.createTextNode("It's a Draw");
-	// 	notify.appendChild(node);
-	// 	var notified = document.getElementById("outcome");
-	// 	notified.appendChild(notify);
-	// 	// Removes the computers choice from the view
-	// 	setTimeout(removeCompScore, 1500);
-
-	// 	function removeCompScore() {
-	// 		notify.removeChild(node);
-	// 	}
 	}
 }
-
+//////////// END OF DISPLAYING CHOICES ON THE PAGE //////////////
 
 //////////// WHEN THE SCORES CHECKER REACHES FIVE ROUNDS IT ANOUNCES THE WINNER
 var playedTimes=0;
@@ -215,12 +159,6 @@ document.querySelector('.scissors').addEventListener("click", function() {
 	playCounter();
 	console.log(human);
 });
-
-// document.getElementsByTagName('body').addEventListener("load",function() {
-// 	alert("home");
-// });
-// document.querySelector('')
-
 
 //////////////////// RECORD KEEPING OF THE SCORES
 //////////// WHEN THE SCORES CHECKER SHOUTS COMPUTER WIN COMP SCORE +1
