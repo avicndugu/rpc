@@ -22,6 +22,12 @@ function computerLogic() {
 		computer = scissors;
 		console.log(computer);
 	}
+	// END OF Computer random selection of rock or paper or scissors/// 
+
+//////////// WHEN THE SCORES CHECKER SHOUTS COMPUTER WIN COMP SCORE +1
+
+//////////// END OF WHEN THE SCORES CHECKER SHOUTS COMPUTER WIN COMP SCORE +1
+
 	/////decision logic to identify who wins////////
 	if (computer == rock) {
 		if (human == rock) {
@@ -83,90 +89,140 @@ function computerLogic() {
 
 	function choices() {
 		// inserts computer's choice as text to the DOM
-		var compChoiceShow = document.createElement('p');
-		var compNode = document.createTextNode(computer);
-		compChoiceShow.appendChild(compNode);
-		var compNoted = document.getElementById("human");
-		// document.getElementById('human').style.padding='0px';
-		// document.getElementById('human').style.backgroundColor='red';
-		compNoted.appendChild(compChoiceShow);
-		// Removes the computers choice from the view
-		setTimeout(hideCompChoice, 1500);
+		var compChoiceShow = document.getElementById('comp');
+		compChoiceShow.innerHTML = computer;
+		// var compChoiceShow = document.createElement('p');
+		// var compNode = document.createTextNode(computer);
+		// compChoiceShow.appendChild(compNode);
+		// var parentHuman= document.getElementById("colHuman")
+		// var compNoted = document.getElementById("comp");
+		// parentHuman.replaceChild(compChoiceShow, compNoted);
+		// // compNoted.appendChild(compChoiceShow);
+		// // Removes the computers choice from the view
+		// setTimeout(hideCompChoice, 1500);
 
-		function hideCompChoice() {
-			compChoiceShow.removeChild(compNode);
-		}
+		// function hideCompChoice() {
+		// 	compChoiceShow.removeChild(compNode);
+		// }
 		// inserts human's choice as text to the DOM
-		var humanChoiceShow = document.createElement('p');
-		var humanNode = document.createTextNode(human);
-		humanChoiceShow.appendChild(humanNode);
-		var humanNoted = document.getElementById("comp");
-		humanNoted.appendChild(humanChoiceShow);
-		// Removes the human's choice from the view
-		setTimeout(hideHumanChoice, 1500);
+		var humanChoiceShow = document.getElementById('human');
+		// console.log(humanChoiceShow);
+		humanChoiceShow.innerHTML= human;
+		// var humanChoiceShow = document.createElement('p');
+		// var humanNode = document.createTextNode(human);
+		// humanChoiceShow.appendChild(humanNode);
+		// var humanNoted = document.getElementById("comp");
+		// humanNoted.appendChild(humanChoiceShow);
+		// // Removes the human's choice from the view
+		// setTimeout(hideHumanChoice, 1500);
 
-		function hideHumanChoice() {
-			humanChoiceShow.removeChild(humanNode);
-		}
+		// function hideHumanChoice() {
+		// 	humanChoiceShow.removeChild(humanNode);
+		// }
 	}
 
 	function compWinShow() {
-		var notify = document.createElement('p');
-		var node = document.createTextNode("Computer Scored");
-		notify.appendChild(node);
-		var notified = document.getElementById("outcome");
-		notified.appendChild(notify);
-		// Removes the computers choice from the view
-		setTimeout(removeCompScore, 1500);
+		var notified = document.getElementById('outcome');
+		notified.innerHTML="Computer Scored";
+		// var notify = document.createElement('p');
+		// var node = document.createTextNode("Computer Scored");
+		// notify.appendChild(node);
+		// var notified = document.getElementById("outcome");
+		// notified.appendChild(notify);
+		// // Removes the computers choice from the view
+		// setTimeout(removeCompScore, 1500);
 
-		function removeCompScore() {
-			notify.removeChild(node);
-		}
+		// function removeCompScore() {
+		// 	notify.removeChild(node);
+		// }
 	}
 
 	function humanWinShow() {
-		var notify = document.createElement('p');
-		var node = document.createTextNode("Human Scored");
-		notify.appendChild(node);
 		var notified = document.getElementById("outcome");
-		notified.appendChild(notify);
-		// Removes the computers choice from the view
-		setTimeout(removeCompScore, 1500);
+		notified.innerHTML="Human Scored";
+		// console.log(notified);		
+		// var notify = document.createElement('p');
+		// var node = document.createTextNode("Human Scored");
+		// notify.appendChild(node);
+		// var notified = document.getElementById("outcome");
+		// notified.appendChild(notify);
+		// // Removes the computers choice from the view
+		// setTimeout(removeCompScore, 1500);
 
-		function removeCompScore() {
-			notify.removeChild(node);
-		}
+		// function removeCompScore() {
+		// 	notify.removeChild(node);
+		// }
 	}
 
 	function drawShow() {
-		var notify = document.createElement('p');
-		var node = document.createTextNode("It's a Draw");
-		notify.appendChild(node);
 		var notified = document.getElementById("outcome");
-		notified.appendChild(notify);
-		// Removes the computers choice from the view
-		setTimeout(removeCompScore, 1500);
+		notified.innerHTML="Its a draw";
+		console.log(notified);
+	// 	var notify = document.createElement('p');
+	// 	var node = document.createTextNode("It's a Draw");
+	// 	notify.appendChild(node);
+	// 	var notified = document.getElementById("outcome");
+	// 	notified.appendChild(notify);
+	// 	// Removes the computers choice from the view
+	// 	setTimeout(removeCompScore, 1500);
 
-		function removeCompScore() {
-			notify.removeChild(node);
-		}
+	// 	function removeCompScore() {
+	// 		notify.removeChild(node);
+	// 	}
 	}
 }
+
+
+//////////// WHEN THE SCORES CHECKER REACHES FIVE ROUNDS IT ANOUNCES THE WINNER
+var playedTimes=0;
+console.log(playedTimes);
+function playCounter() {
+	if (playedTimes<5) {
+		playedTimes=playedTimes+1;
+		console.log(playedTimes);
+	}
+	else {
+		if (computerScore>humanScore) {
+			console.log("Comp Has the most points");
+		}
+		else if (computerScore<humanScore) {
+			console.log("Human has the most points");	
+		}
+		else{
+			console.log("It's a draw");
+		}
+		console.log("game over announce the winner with the highest points");
+	}
+}
+//////////// END OF WHEN THE SCORES CHECKER REACHES FIVE ROUNDS IT ANOUNCES THE WINNER
+
 // Human selection ///////
 document.querySelector('.rock').addEventListener("click", function() {
 	human = rock;
 	computerLogic();
+	playCounter();
 	console.log(human);
 });
 document.querySelector('.paper').addEventListener("click", function() {
 	human = paper;
 	computerLogic();
+	playCounter();
 	console.log(human);
 });
 document.querySelector('.scissors').addEventListener("click", function() {
 	human = scissors;
 	computerLogic();
+	playCounter();
 	console.log(human);
 });
 
-document.querySelector('')
+// document.getElementsByTagName('body').addEventListener("load",function() {
+// 	alert("home");
+// });
+// document.querySelector('')
+
+
+//////////////////// RECORD KEEPING OF THE SCORES
+//////////// WHEN THE SCORES CHECKER SHOUTS COMPUTER WIN COMP SCORE +1
+//////////// WHEN THE SCORES CHECKER SHOUTS HUMAN WIN HUMAN SCORE +1
+////////////  WHEN THE SCORES CHECKER SHOUTS DRAW SCORE REMAINS THE SAME

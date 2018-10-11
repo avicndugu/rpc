@@ -38,24 +38,24 @@ FA7F7F
 	width:100%;
 }
 
-.collumn2 {
+.collumn3 {
 	float:left;
 	width:33.3333%;
 	/*padding:20px 0;*/
 	/*background:#ABEDD8;*/
 	text-align: center;
 }
-.collumn2 #human {
+.collumn3 #human {
 	padding:10px 0px;
 	border-radius: 40px 0px;
 	background-color: #FA7F7F;
 }
-.collumn2 #comp {
+.collumn3 #comp {
 	padding:10px 0px;
 	border-radius: 40px 0px;
 	background-color: #FA7F7F;
 }
-.collumn2 #outcome {
+.collumn3 #outcome {
 	padding:10px 0px;
 	border-radius: 40px 0px;
 	background-color: #FA7F7F;
@@ -69,3 +69,4 @@ FA7F7F
 .row:after {
  clear: all;
 }
+	
