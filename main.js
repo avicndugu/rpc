@@ -24,10 +24,6 @@ function computerLogic() {
 	}
 	// END OF Computer random selection of rock or paper or scissors/// 
 
-//////////// WHEN THE SCORES CHECKER SHOUTS COMPUTER WIN COMP SCORE +1
-
-//////////// END OF WHEN THE SCORES CHECKER SHOUTS COMPUTER WIN COMP SCORE +1
-
 	///// Decision logic to identify who wins, draws or looses ////////
 	if (computer == rock) {
 		if (human == rock) {
@@ -112,7 +108,6 @@ function computerLogic() {
 	function drawShow() {
 		var notified = document.getElementById("outcome");
 		notified.innerHTML="Its a draw";
-		console.log(notified);
 	}
 }
 //////////// END OF DISPLAYING CHOICES ON THE PAGE //////////////
@@ -123,7 +118,6 @@ console.log(playedTimes);
 function playCounter() {
 	if (playedTimes<5) {
 		playedTimes=playedTimes+1;
-		console.log(playedTimes);
 	}
 	else {
 		if (computerScore>humanScore) {
@@ -145,19 +139,16 @@ document.querySelector('.rock').addEventListener("click", function() {
 	human = rock;
 	computerLogic();
 	playCounter();
-	console.log(human);
 });
 document.querySelector('.paper').addEventListener("click", function() {
 	human = paper;
 	computerLogic();
 	playCounter();
-	console.log(human);
 });
 document.querySelector('.scissors').addEventListener("click", function() {
 	human = scissors;
 	computerLogic();
 	playCounter();
-	console.log(human);
 });
 
 //////////////////// RECORD KEEPING OF THE SCORES
