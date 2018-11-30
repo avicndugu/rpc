@@ -10,11 +10,15 @@ img{
 	margin-right: auto;
 }
 #heading p {
+	padding-top: 50px;
 	text-align: center;
 	font-size: 20px; 
 }
 .row{
-	width:100%;
+	padding-top: 50px;
+	width:90%;
+	margin-right: auto;
+	margin-left: auto;
 	/*padding:5%;*/
 }
 .collumn{

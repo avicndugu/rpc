@@ -5,6 +5,9 @@ var computer, human;
 var rock = "rock";
 var paper = "paper";
 var scissors = "scissors";
+var cScore=document.getElementById("cScore");
+var hScore=document.getElementById("hScore");
+var winner=document.getElementById("winner");
 let humanScore = 0;
 let computerScore = 0;
 
@@ -68,6 +71,7 @@ function computerLogic() {
 			humanScore += 1;
 			humanWinShow();
 			choices();
+
 			console.log("Human Wins");
 		} else if (human == paper) {
 			computerScore += 1;
@@ -121,16 +125,23 @@ function playCounter() {
 	}
 	else {
 		if (computerScore>humanScore) {
+			winner.innerHTML = "Computer is the winner";
 			console.log("Comp Has the most points");
 		}
 		else if (computerScore<humanScore) {
+			winner.innerHTML = "You are the winner";
 			console.log("Human has the most points");	
 		}
 		else{
+			winner.innerHTML = "It is a draw";
 			console.log("It's a draw");
 		}
 		console.log("game over announce the winner with the highest points");
 	}
+}
+function pointsCounter() {
+    cScore.innerHTML ="Computer score is : "+computerScore;
+	hScore.textContent="Your  score is : "+humanScore;
 }
 //////////// END OF WHEN THE SCORES CHECKER REACHES FIVE ROUNDS IT ANOUNCES THE WINNER
 
@@ -139,15 +150,18 @@ document.querySelector('.rock').addEventListener("click", function() {
 	human = rock;
 	computerLogic();
 	playCounter();
+	pointsCounter();
 });
 document.querySelector('.paper').addEventListener("click", function() {
 	human = paper;
 	computerLogic();
 	playCounter();
+	pointsCounter();
 });
 document.querySelector('.scissors').addEventListener("click", function() {
 	human = scissors;
 	computerLogic();
+	pointsCounter();
 	playCounter();
 });
 
