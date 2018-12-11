@@ -6,48 +6,59 @@
   <link href="main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <div id="heading">
-    <p>Click on any item to begin the game</p>
+  <div id="view1">
+    <div class=" view1-container">
+      <img src="img/rock.png">
+    </div>
+    <div class="view1-container">
+      <button id="start">Play</button>
+    </div>
   </div>
-  <div class="row">
-    <div class="scissors collumn">
-      <div class="container">
-        <img alt="rock" src="img/scissors.png">
+  <div id="view2">
+    <div id="heading">
+      <p>Click on any item to begin the game</p>
+    </div>
+    <div class="row">
+      <div class="scissors collumn">
+        <div class="container">
+          <img alt="rock" src="img/scissors.png">
+        </div>
+      </div>
+      <div class="paper collumn">
+        <div class="container">
+          <img alt="" src="img/paper.png">
+        </div>
+      </div>
+      <div class="rock collumn">
+        <div class="container">
+          <img class="rock" src="img/rock.png">
       </div>
     </div>
-    <div class="paper collumn">
-      <div class="container">
-        <img alt="" src="img/paper.png">
+    <div id="pageNote" class="row2">
+      <div class="collumn3" id="colHuman">
+        You
+        <p id="human">Your Choice</p>
+      </div>
+      <div class="collumn3">
+        Outcome
+        <p id="outcome">Who scored</p>
+      </div>
+      <div class="collumn3">
+        Computer
+        <p id="comp">Computer's Choice</p>
       </div>
     </div>
-    <div class="rock collumn">
-      <div class="container">
-        <img class="rock" src="img/rock.png">
+      <div id="score" class="row2">
+        <p id="hScore"></p>
+        <p id="cScore"></p>
+        <p id="winner"></p>
+        <button id="restart">Restart</button>
     </div>
   </div>
-  <div id="pageNote" class="row2">
-    <div class="collumn3" id="colHuman">
-      You
-      <p id="human">Your Choice</p>
-    </div>
-    <div class="collumn3">
-      Outcome
-      <p id="outcome">Who scored</p>
-    </div>
-    <div class="collumn3">
-      Computer
-      <p id="comp">Computer's Choice</p>
-    </div>
-  </div>
-    <div id="score" class="row2">
-      <p id="hScore"></p>
-      <p id="cScore"></p>
-      <p id="winner"></p>
-  </div>
+
   <script src="main.js">
   </script>
-  <script>
-    
+    <script src="view.js">
   </script>
 </body>
 </html>

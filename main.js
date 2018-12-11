@@ -169,3 +169,8 @@ document.querySelector('.scissors').addEventListener("click", function() {
 //////////// WHEN THE SCORES CHECKER SHOUTS COMPUTER WIN COMP SCORE +1
 //////////// WHEN THE SCORES CHECKER SHOUTS HUMAN WIN HUMAN SCORE +1
 ////////////  WHEN THE SCORES CHECKER SHOUTS DRAW SCORE REMAINS THE SAME
+
+document.querySelector("#restart").addEventListener("click",function(){
+	humanScore = 0;
+	computerScore = 0;
+});

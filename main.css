@@ -77,4 +77,16 @@ FA7F7F
 .row:after {
  clear: all;
 }
-	
+
+
+#view1 {
+	width:100%;
+	text-align: center;
+}
+#view1 img {
+	width:200px;
+	padding:30px;
+}
+.view1-container {
+
+}
